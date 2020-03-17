@@ -81,7 +81,10 @@ _The variables required in order for the module to be successfully called from t
 
 |**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
 |:----|:----|-----:|:---:|
-| **_tags_** | _A mapping of tags to assign to the resource_ | _map(string)_ | **_Required_** |
+| **_vpc\_id_** | _The VPC ID_ | _string_ | **_Required_** |
+| **_route_** | _A list of route objects_ | _any_ | **_Optional <br/> (Default - [])_** |
+| **_propagating\_vgws_** | _A list of virtual gateways for propagation_ | _any_ | **_Optional <br/> (Default - [])_** |
+| **_tags_** | _A mapping of tags to assign to the resource_ | _map(string)_ | **_Optional <br/> (Default - {})_** |
 
 
 ---
