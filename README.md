@@ -67,7 +67,7 @@ module "vpc_route_table" {
     var.common_tags,
     {
       Environment = "prod"
-      Name        = "rabbitmq-vpc-subnet-public-1a"
+      Name        = "vpc-route-table-public"
     }
   )
 }
