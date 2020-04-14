@@ -48,8 +48,9 @@ _To use this module, add the following call to your code:_
 ```tf
 module "vpc_route_table" {
   source = "git::https://github.com/nitinda/terraform-module-aws-vpc-route-table.git?ref=master"
-
-  tags                = {
+  
+  vpc_id = module.vpc.id
+  tags   = {
     Environment = "prod"
     Project     = "POC"
   }
@@ -60,9 +61,9 @@ module "vpc_route_table" {
 ```tf
 module "vpc_route_table" {
   source = "git::https://github.com/nitinda/terraform-module-aws-vpc-route-table.git?ref=master"
-
   
-  tags                 = {
+  vpc_id = module.vpc.id  
+  tags = {
     Environment = "prod"
     Project     = "POC"
   }
