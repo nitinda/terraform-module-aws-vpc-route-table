@@ -63,10 +63,13 @@ module "vpc_route_table" {
   source = "git::https://github.com/nitinda/terraform-module-aws-vpc-route-table.git?ref=master"
   
   vpc_id = module.vpc.id  
-  tags = {
-    Environment = "prod"
-    Project     = "POC"
-  }
+  tags   = merge(
+    var.common_tags,
+    {
+      Environment = "prod"
+      Name        = "rabbitmq-vpc-subnet-public-1a"
+    }
+  )
 }
 
 ```
